@@ -1,0 +1,35 @@
+body {
+	font-family: "Ubuntu", "Open Sans", Arial, Helvetica, sans-serif;
+
+	display: grid;
+	grid-template-areas: 
+	"head head head head"
+	"body body body body"
+	"foot foot foot foot";
+}
+
+header {
+	font-size: 1.3em;
+	grid-area: "head";
+}
+
+main {
+	grid-area: "body";
+}
+
+footer {
+	grid-area: "foot";
+}
+
+#left {
+	float: left;
+}
+
+#right {
+	float: right;
+}
+
+h3 {
+	float: left;
+	text-align: center;
+}
