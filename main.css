@@ -50,6 +50,7 @@ footer {
 #projects > div > div {
 	margin: 0;
 	padding: 0.5em 0.5em;
+	max-height: 60%;
 }
 
 #projects > div > div > h3 {
