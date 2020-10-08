@@ -1,27 +1,23 @@
 body {
-	font-family: "Ubuntu", "Open Sans", Arial, Helvetica, sans-serif;
+ 	font-family: "Ubuntu", "Open Sans", Arial, Helvetica, sans-serif;
 
 	display: grid;
 	grid-template-areas: 
-	"left head riht"
+	"head head head"
 	"body body body"
 	"foot foot foot";
 }
 
-#head {
-	font-size: 1.3em;
+header {
 	grid-area: head;
+	
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
 
-#left {
-	grid-area: left;
-	float: left;
-}
-
-#right {
-	grid-area: riht;
-	float: right;
-}
+/*
+TODO: Header bar, make it look good
+*/
 
 main {
 	grid-area: body;
@@ -32,38 +28,53 @@ footer {
 	text-align: center;
 }
 
-#projects {
+#project-group {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 2em;
 	grid-row-gap: 2em;
 	max-width: 1000px;
-
+	width: 80%;
 	margin: auto auto;
 }
 
-#projects > div {
-	max-width: 400px;
+.project {
+	max-width: 100%;
+	min-width: 250px;
 	position: relative;
+
+	background-color: lightgray;
+	/* border: 4px dashed black; */
 }
 
-#projects > div > div {
-	margin: 0;
-	padding: 0.5em 0.5em;
-	max-height: 60%;
-}
-
-#projects > div > div > h3 {
+.project > div > h3 {
+	margin: 0.5em 0 0.5em 0.5em;
 	text-decoration: underline;
 }
 
-#projects > div > div > p {
-	text-align: justify;
+.project > div > p {
+	margin-left: 0.5em;
 }
 
-#projects > div > img {
-	width: auto;
-	position: relative;
-	bottom: 0;
-	max-height: 40%;
+.project > div > ul {
+	padding-left: 30px;
+	margin: 0.5em 0 0.5em 0;
+}
+
+.project > img {
+	max-width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+	#project-group {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	#project-group {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
