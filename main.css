@@ -57,7 +57,7 @@ footer {
 }
 
 #projects > div > div > p {
-
+	text-align: justify;
 }
 
 #projects > div > img {
