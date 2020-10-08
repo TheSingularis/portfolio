@@ -3,33 +3,66 @@ body {
 
 	display: grid;
 	grid-template-areas: 
-	"head head head head"
-	"body body body body"
-	"foot foot foot foot";
+	"left head riht"
+	"body body body"
+	"foot foot foot";
 }
 
-header {
+#head {
 	font-size: 1.3em;
-	grid-area: "head";
-}
-
-main {
-	grid-area: "body";
-}
-
-footer {
-	grid-area: "foot";
+	grid-area: head;
 }
 
 #left {
+	grid-area: left;
 	float: left;
 }
 
 #right {
+	grid-area: riht;
 	float: right;
 }
 
-h3 {
-	float: left;
+main {
+	grid-area: body;
+}
+
+footer {
+	grid-area: foot;
 	text-align: center;
+}
+
+#projects {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 2em;
+	grid-row-gap: 2em;
+	max-width: 1000px;
+
+	margin: auto auto;
+}
+
+#projects > div {
+	max-width: 400px;
+	position: relative;
+}
+
+#projects > div > div {
+	margin: 0;
+	padding: 0.5em 0.5em;
+}
+
+#projects > div > div > h3 {
+	text-decoration: underline;
+}
+
+#projects > div > div > p {
+
+}
+
+#projects > div > img {
+	width: auto;
+	position: relative;
+	bottom: 0;
+	max-height: 40%;
 }
