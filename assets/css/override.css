@@ -1,0 +1,15 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.navbar-brand {
+  font-weight: bold;
+}
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px;
+  }
+}
