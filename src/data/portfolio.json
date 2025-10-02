@@ -1,0 +1,74 @@
+{
+  "personal": {
+    "name": "Your Name",
+    "title": "Software Developer",
+    "intro": "I'm a passionate developer who loves building innovative solutions and exploring new technologies.",
+    "email": "your.email@example.com",
+    "about": "I have a strong background in software development with experience in web technologies, mobile apps, and game development. When I'm not coding, you'll find me experimenting with new frameworks or participating in game jams.",
+    "location": "Your City"
+  },
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Python",
+    "SQL",
+    "Git",
+    "CSS/HTML",
+    "REST APIs",
+    "Agile Development"
+  ],
+  "featuredProjects": [
+    {
+      "id": 1,
+      "title": "E-commerce Platform",
+      "description": "A full-stack e-commerce solution built with React and Node.js, featuring user authentication, payment processing, and inventory management.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe API"],
+      "link": "https://github.com/yourusername/ecommerce-platform",
+      "live": "https://your-ecommerce-demo.com"
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "description": "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      "technologies": ["Vue.js", "Express", "Socket.io", "PostgreSQL"],
+      "link": "https://github.com/yourusername/task-manager",
+      "live": "https://your-task-app.com"
+    },
+    {
+      "id": 3,
+      "title": "Weather Dashboard",
+      "description": "A responsive weather dashboard that displays current conditions and forecasts with beautiful visualizations and location-based services.",
+      "technologies": ["React", "Chart.js", "Weather API", "CSS Grid"],
+      "link": "https://github.com/yourusername/weather-dashboard"
+    }
+  ],
+  "gameJamProjects": [
+    {
+      "id": 1,
+      "title": "Pixel Runner",
+      "description": "A retro-style endless runner game created in 48 hours for Ludum Dare. Features pixel art graphics and chiptune music.",
+      "technologies": ["JavaScript", "HTML5 Canvas", "Web Audio API"],
+      "link": "https://github.com/yourusername/pixel-runner",
+      "live": "https://your-pixel-runner.com",
+      "event": "Ludum Dare 50"
+    },
+    {
+      "id": 2,
+      "title": "Space Defender",
+      "description": "A minimalist space shooter built with vanilla JavaScript in 72 hours. Simple controls, increasing difficulty.",
+      "technologies": ["JavaScript", "Canvas API", "Local Storage"],
+      "link": "https://github.com/yourusername/space-defender",
+      "event": "js13kGames 2023"
+    },
+    {
+      "id": 3,
+      "title": "Puzzle Garden",
+      "description": "A zen puzzle game about growing plants. Created for a weekend game jam with focus on relaxing gameplay.",
+      "technologies": ["Unity", "C#", "Procedural Generation"],
+      "link": "https://github.com/yourusername/puzzle-garden",
+      "event": "Global Game Jam 2023"
+    }
+  ]
+}
