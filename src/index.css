@@ -201,6 +201,18 @@ body {
   border: 1px solid #ede9e3;
 }
 
+.skill-link {
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.skill-link:hover {
+  background-color: #4a67a1;
+  color: #ffffff;
+  border-color: #4a67a1;
+  transform: translateY(-2px);
+}
+
 /* About section */
 .about-content {
   text-align: center;
@@ -246,6 +258,30 @@ body {
 .email-link:hover {
   border-bottom-color: #4a67a1;
   color: #2d4a82;
+}
+
+.contact-links {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  color: #4a67a1;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid #4a67a1;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+  background-color: #4a67a1;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .resume-download {

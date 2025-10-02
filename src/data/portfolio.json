@@ -7,10 +7,16 @@
     "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "location": "Hudson, Wisconsin. (Batteries Plus Bulbs)",
     "profileImage": "/portfolio/profile.jpg",
-    "resume": "/portfolio/resume.pdf"
+    "resume": "/portfolio/resume.pdf",
+    "github": "https://github.com/yourusername",
+    "itchio": "https://yourusername.itch.io",
+    "linkedin": "https://linkedin.com/in/yourusername"
   },
   "skills": [
-    "Skill 1",
+    {
+      "name": "Unreal Engine",
+      "link": "https://www.unrealengine.com/"
+    },
     "Skill 2",
     "Skill 3",
     "Skill 4",

@@ -47,9 +47,27 @@ function App() {
         <section className="section section-divider">
           <h2 className="section-title">Skills</h2>
           <div className="skills-grid">
-            {skills.map((skill, index) => (
-              <span key={index} className="skill-item">{skill}</span>
-            ))}
+            {skills.map((skill, index) => {
+              // Handle both string skills and object skills with links
+              if (typeof skill === 'object' && skill.link) {
+                return (
+                  <a 
+                    key={index} 
+                    href={skill.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="skill-item skill-link"
+                  >
+                    {skill.name}
+                  </a>
+                );
+              } else {
+                const skillName = typeof skill === 'object' ? skill.name : skill;
+                return (
+                  <span key={index} className="skill-item">{skillName}</span>
+                );
+              }
+            })}
           </div>
         </section>
 
@@ -72,6 +90,41 @@ function App() {
             <a href={`mailto:${personal.email}`} className="email-link">
               {personal.email}
             </a>
+            
+            {/* Social and Professional Links */}
+            <div className="contact-links">
+              {personal.github && (
+                <a 
+                  href={personal.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="contact-link"
+                >
+                  GitHub
+                </a>
+              )}
+              {personal.linkedin && (
+                <a 
+                  href={personal.linkedin} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="contact-link"
+                >
+                  LinkedIn
+                </a>
+              )}
+              {personal.itchio && (
+                <a 
+                  href={personal.itchio} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="contact-link"
+                >
+                  Itch.io
+                </a>
+              )}
+            </div>
+
             {personal.resume && (
               <div className="resume-download">
                 <a 
