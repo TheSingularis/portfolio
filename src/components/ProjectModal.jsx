@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from './Modal';
+import ImageCarousel from './ImageCarousel';
 
 const ProjectModal = ({ isOpen, onClose, project, isGameJam = false }) => {
   if (!project) return null;
@@ -7,15 +8,12 @@ const ProjectModal = ({ isOpen, onClose, project, isGameJam = false }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={project.title} size="large">
       <div className="project-modal-content">
-        {project.image && (
-          <div className="project-modal-image">
-            <img 
-              src={project.image} 
-              alt={`${project.title} screenshot`}
-              className="modal-project-image"
-            />
-          </div>
-        )}
+        <div className="project-modal-image">
+          <ImageCarousel 
+            project={project} 
+            className="modal-carousel"
+          />
+        </div>
         
         <div className="project-modal-details">
           {isGameJam && project.event && (

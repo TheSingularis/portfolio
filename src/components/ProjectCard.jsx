@@ -1,26 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { getProjectThumbnail } from '../utils/imageLoader';
 
 const ProjectCard = ({ project, isGameJam = false, onProjectClick }) => {
+  const [thumbnailImage, setThumbnailImage] = useState(null);
+  const [isLoadingImage, setIsLoadingImage] = useState(true);
+
+  useEffect(() => {
+    const loadThumbnail = async () => {
+      setIsLoadingImage(true);
+      try {
+        const thumbnail = await getProjectThumbnail(project);
+        setThumbnailImage(thumbnail);
+      } catch (error) {
+        console.error('Error loading project thumbnail:', error);
+        setThumbnailImage(null);
+      } finally {
+        setIsLoadingImage(false);
+      }
+    };
+
+    loadThumbnail();
+  }, [project]);
+
   const handleCardClick = () => {
     if (onProjectClick) {
       onProjectClick(project);
     }
   };
 
+  const hasImage = thumbnailImage || project.image;
+
   return (
     <div 
-      className={`project-card ${project.image ? 'project-card--with-image' : ''}`}
+      className={`project-card ${hasImage ? 'project-card--with-image' : ''}`}
       onClick={handleCardClick}
       style={{ cursor: 'pointer' }}
     >
-      {project.image && (
+      {hasImage && (
         <div className="project-image-section">
-          <img 
-            src={project.image} 
-            alt={`${project.title} screenshot`}
-            className="project-image"
-            loading="lazy"
-          />
+          {isLoadingImage ? (
+            <div className="project-image-loading">Loading...</div>
+          ) : (
+            <img 
+              src={thumbnailImage || project.image} 
+              alt={`${project.title} screenshot`}
+              className="project-image"
+              loading="lazy"
+            />
+          )}
         </div>
       )}
       <div className="project-content-section">

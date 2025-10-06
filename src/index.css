@@ -532,8 +532,6 @@ body {
 
 .project-modal-image {
   width: 100%;
-  max-height: 400px;
-  overflow: hidden;
   border-radius: 8px;
   background-color: #f8f6f3;
 }
@@ -647,6 +645,161 @@ body {
 }
 
 /* Responsive Modal Styles */
+/* Image Carousel Styles */
+.image-carousel {
+  width: 100%;
+  max-width: 100%;
+}
+
+.image-carousel.loading,
+.image-carousel.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  color: #666;
+}
+
+.carousel-main {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.carousel-main-image {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: visible;
+  background-color: #f5f5f5;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.carousel-nav:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav-prev {
+  left: 10px;
+}
+
+.carousel-nav-next {
+  right: 10px;
+}
+
+.carousel-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  z-index: 2;
+}
+
+.carousel-thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.carousel-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel-thumbnails::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.carousel-thumbnails::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.carousel-thumbnail {
+  flex-shrink: 0;
+  width: 80px;
+  height: 60px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.carousel-thumbnail:hover {
+  border-color: #8b7355;
+  transform: scale(1.05);
+}
+
+.carousel-thumbnail.active {
+  border-color: #8b7355;
+  box-shadow: 0 0 0 2px rgba(139, 115, 85, 0.3);
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Modal-specific carousel styling */
+.modal-carousel .carousel-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-carousel .carousel-thumbnails {
+  max-height: 100px;
+}
+
+/* Project card loading state */
+.project-image-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background-color: #f5f5f5;
+  color: #666;
+  border-radius: 8px;
+}
+
 @media (max-width: 768px) {
   .modal-overlay {
     padding: 0.5rem;
@@ -679,5 +832,30 @@ body {
   .modal-project-link {
     text-align: center;
     justify-content: center;
+  }
+
+  /* Mobile carousel adjustments */
+  .carousel-nav {
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+  
+  .carousel-nav-prev {
+    left: 5px;
+  }
+  
+  .carousel-nav-next {
+    right: 5px;
+  }
+  
+  .carousel-thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .modal-carousel .carousel-image {
+    max-width: 100%;
+    height: auto;
   }
 }

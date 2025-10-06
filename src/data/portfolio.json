@@ -53,7 +53,7 @@
       "duration": "8 months (part-time)",
       "teamSize": "Solo developer",
       "links": [{"download": "/portfolio/projects/world-of-zombies.zip"}],
-      "image": "/portfolio/projects/world-of-zombies.png"
+      "images": "/portfolio/projects/world-of-zombies/images"
     }
   ],
   "gameJamProjectsDeprecated": [
