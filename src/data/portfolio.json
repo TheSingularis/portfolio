@@ -1,11 +1,11 @@
 {
   "personal": {
-    "name": "Dom in a Q",
+    "name": "Aiden Sluiter",
     "title": "Videogame Developer",
-    "intro": "I'm a dom in a q, I like to eat out of date sour cream and bread rolls with the consistency of a brick.",
+    "intro": "Hi, I'm Aiden! I'm a passionate videogame developer with experience in creating immersive and engaging gaming experiences. I love bringing ideas to life through code and design.",
     "email": "your.email@example.com",
     "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "location": "Hudson, Wisconsin. (Batteries Plus Bulbs)",
+    "location": "Hudson, Wisconsin, USA",
     "profileImage": "/portfolio/profile.jpg",
     "resume": "/portfolio/resume.pdf",
     "github": "https://github.com/yourusername",
@@ -20,38 +20,37 @@
     "Skill 2",
     "Skill 3",
     "Skill 4",
-    "Skill 5",
+    {
+        "name": "Unity Engine",
+        "link": "https://unity.com/"
+    },
     "Skill 6",
     "Skill 7",
-    "Skill 8"
+    {
+        "name": "Salesforce",
+        "link": "https://salesforce.com"
+    }
   ],
   "featuredProjects": [
     {
       "id": 1,
-      "title": "Project 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "technologies": ["Dom", "in", "a", "Queueue"],
+      "title": "World of Zombies",
+      "description": "World of Zombies was an independent game project inspired by my favorite Call of Duty Zombies game mode. I was fascinated by its storytelling, hidden lore, and environmental clues that encouraged exploration and discovery. Over the course of approximately eight months-working after school and on weekends I had worked on World of Zombies, and launched it on the Mac App Store in mid 2014. \n\nThe game launched with two playable maps, House and Swamp, each featuring distinct environments, special event rounds, and unique boss encounters that rewarded players with ammo and supply drops upon defeat.",
+      "technologies": ["Unity3D", "Lighting Systems", "AI NavMesh Navigation", "Level of Detail", "Menu UI", "Level Design"],
       "link": "https://github.com/yourusername/ecommerce-platform",
-      "live": "https://your-ecommerce-demo.com"
-    },
-
-    {
-      "id": 1,
-      "title": "Doms laptop",
-      "description": "A graphing calculator connected directly to a GTX 780 ti",
-      "technologies": ["Potato battery"],
-      "link": "https://github.com/yourusername/pixel-runner",
-      "live": "https://your-pixel-runner.com"
+      "live": "https://your-ecommerce-demo.com",
+      "image": "/portfolio/projects/world-of-zombies.png"
     }
   ],
-  "gameJamProjects": [
+  "gameJamProjectsDeprecated": [
     {
       "id": 1,
       "title": "Space Defender",
       "description": "A minimalist space shooter built with vanilla JavaScript in 72 hours. Simple controls, increasing difficulty.",
       "technologies": ["JavaScript", "Canvas API", "Local Storage"],
       "link": "https://github.com/yourusername/space-defender",
-      "event": "js13kGames 2023"
+      "event": "js13kGames 2023",
+      "image": "/portfolio/projects/space-defender.svg"
     },
     {
       "id": 3,
@@ -59,7 +58,8 @@
       "description": "A zen puzzle game about growing plants. Created for a weekend game jam with focus on relaxing gameplay.",
       "technologies": ["Unity", "C#", "Procedural Generation"],
       "link": "https://github.com/yourusername/puzzle-garden",
-      "event": "Global Game Jam 2023"
+      "event": "Global Game Jam 2023",
+      "image": "/portfolio/projects/puzzle-garden.svg"
     }
   ]
 }

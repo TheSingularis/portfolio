@@ -36,12 +36,14 @@ function App() {
         />
 
         {/* Game Jam / Side Projects */}
-        <ProjectSection 
-          title="Game Jam / Side Projects" 
-          projects={gameJamProjects} 
-          isGameJam={true}
-          className="section-divider"
-        />
+        {gameJamProjects && gameJamProjects.length > 0 && (
+          <ProjectSection 
+            title="Game Jam / Side Projects" 
+            projects={gameJamProjects} 
+            isGameJam={true}
+            className="section-divider"
+          />
+        )}
 
         {/* Skills Section */}
         <section className="section section-divider">
