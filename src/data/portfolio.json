@@ -33,27 +33,37 @@
   ],
   "featuredProjects": [
     {
-      "id": 1,
-      "title": "World of Zombies",
-      "description": "World of Zombies was an independent game project inspired by my favorite Call of Duty Zombies game mode. I was fascinated by its storytelling, hidden lore, and environmental clues that encouraged exploration and discovery.",
-      "detailedDescription": "Over the course of approximately eight months-working after school and on weekends I had worked on World of Zombies, and launched it on the Mac App Store in mid 2014. \n\nThe game launched with two playable maps, House and Swamp, each featuring distinct environments, special event rounds, and unique boss encounters that rewarded players with ammo and supply drops upon defeat..",
-      "key-lessons-learned": [{
-        "lesson": "Lighting",
-        "description": "One of the earliest and most valuable lessons from World of Zombies was mastering in-engine lighting. I learned how to properly configure directional lights, set up global illumination bounces, and pre-bake lighting."
-      },
-        {
-            "lesson": "AI Navigation (NavMesh)",
-            "description": "Implementing and refining the NavMesh system gave me a deep understanding of how AI move within game environments. I learned how to define climbable angles, establish out-of-bounds areas, and fine-tune navigation for reliable enemy behavior."
-        },
-    {
-        "lesson": "Level of Detail (LOD)",
-        "description": "I gained practical experience in optimizing game performance through Level of Detail (LOD) management—ensuring that assets scaled efficiently across different hardware while maintaining visual fidelity."
-      },{"lesson": "User Interface (Menu & Settings)", "description": "World of Zombies marked my first experience building a functional menu and settings system. Although simple, it taught me the fundamentals of GUI systems—positioning elements, using pixel-based anchors, and structuring user navigation."},{"lesson": "Level Design & Terrain Creation", "description": "I spent extensive time in Unity’s Terrain system, learning how to sculpt landscapes, paint textures, place vegetation, and set up environment boundaries. I also implemented dynamic footstep sounds that changed based on surface material, enhancing player immersion."}],
-      "technologies": ["Unity3D", "Lighting Systems", "AI NavMesh Navigation", "Level of Detail", "Menu UI", "Level Design"],
-      "duration": "8 months (part-time)",
-      "teamSize": "Solo developer",
-      "links": [{"download": "/portfolio/projects/world-of-zombies.zip"}],
-      "images": "/portfolio/projects/world-of-zombies/images"
+        "id": 1,
+        "title": "World of Zombies",
+        "description": "World of Zombies was an independent game project inspired by my favorite Call of Duty Zombies game mode. I was fascinated by its storytelling, hidden lore, and environmental clues that encouraged exploration and discovery.",
+        "detailedDescription": "Over the course of approximately eight months-working after school and on weekends I had worked on World of Zombies, and launched it on the Mac App Store in mid 2014. \n\nThe game launched with two playable maps, House and Swamp, each featuring distinct environments, special event rounds, and unique boss encounters that rewarded players with ammo and supply drops upon defeat..",
+        "key-lessons-learned": [
+            {
+                "lesson": "Lighting",
+                "description": "One of the earliest and most valuable lessons from World of Zombies was mastering in-engine lighting. I learned how to properly configure directional lights, set up global illumination bounces, and pre-bake lighting."
+            },
+            {
+                "lesson": "AI Navigation (NavMesh)",
+                "description": "Implementing and refining the NavMesh system gave me a deep understanding of how AI move within game environments. I learned how to define climbable angles, establish out-of-bounds areas, and fine-tune navigation for reliable enemy behavior."
+            },
+            {
+                "lesson": "Level of Detail (LOD)",
+                "description": "I gained practical experience in optimizing game performance through Level of Detail (LOD) management—ensuring that assets scaled efficiently across different hardware while maintaining visual fidelity."
+            },
+            {
+                "lesson": "User Interface (Menu & Settings)", 
+                "description": "World of Zombies marked my first experience building a functional menu and settings system. Although simple, it taught me the fundamentals of GUI systems—positioning elements, using pixel-based anchors, and structuring user navigation."
+            },
+            {
+                "lesson": "Level Design & Terrain Creation", 
+                "description": "I spent extensive time in Unity’s Terrain system, learning how to sculpt landscapes, paint textures, place vegetation, and set up environment boundaries. I also implemented dynamic footstep sounds that changed based on surface material, enhancing player immersion."
+            }
+        ],
+        "technologies": ["Unity3D", "Lighting Systems", "AI NavMesh Navigation", "Level of Detail", "Menu UI", "Level Design"],
+        "duration": "8 months (part-time)",
+        "teamSize": "Solo developer",
+        "links": [{"download": "/portfolio/projects/world-of-zombies.zip"}],
+        "images": "/portfolio/projects/world-of-zombies/images"
     }
   ],
   "gameJamProjectsDeprecated": [

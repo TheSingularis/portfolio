@@ -5,8 +5,8 @@
   "description": "A minimal portfolio website",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node scripts/generateManifests.cjs && vite",
+    "build": "node scripts/generateManifests.cjs && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

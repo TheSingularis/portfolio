@@ -1,74 +1,62 @@
 /**
- * Utility functions for loading images from directories
+ * Utility functions for loading images from directories using build-time generated manifests
  */
 
-// Known image files for World of Zombies project
-const WORLD_OF_ZOMBIES_IMAGES = [
-  "Screenshot_2025-10-05_222331.png",
-  "Screenshot_2025-10-05_222426.png",
-  "Screenshot_2025-10-05_222756.png",
-  "Screenshot_2025-10-05_222905.png",
-  "Screenshot_2025-10-05_223135.png",
-  "Screenshot_2025-10-05_223523.png",
-  "Screenshot_2025-10-05_223557.png",
-];
-
 /**
- * Project-specific image mappings
- * For each project, list the images that exist in its directory
+ * Cache for discovered images to avoid repeated API calls
  */
-const PROJECT_IMAGE_MAPPINGS = {
-  "/portfolio/projects/world-of-zombies/images": WORLD_OF_ZOMBIES_IMAGES,
-};
+const imageCache = new Map();
 
 /**
- * Loads all images from a directory based on predefined mappings
- * @param {string} imagePath - Path to the images directory
+ * Dynamically discovers and loads all images from a directory
+ * @param {string} imagePath - Path to the images directory (e.g., "/portfolio/projects/project-name/images")
  * @returns {Promise<string[]>} - Array of full image URLs
  */
 export const loadImagesFromDirectory = async (imagePath) => {
-  const imageFiles = PROJECT_IMAGE_MAPPINGS[imagePath];
+  // Check cache first
+  if (imageCache.has(imagePath)) {
+    return imageCache.get(imagePath);
+  }
 
-  if (!imageFiles) {
-    console.warn(`No image mapping found for path: ${imagePath}`);
+  try {
+    // Try to fetch the directory listing (this works if the server supports directory listing)
+    // For most static hosts, we'll need to use a different approach
+    const discoveredImages = await discoverImagesInDirectory(imagePath);
+
+    // Cache the results
+    imageCache.set(imagePath, discoveredImages);
+    return discoveredImages;
+  } catch (error) {
+    console.warn(`Could not load images from ${imagePath}:`, error.message);
     return [];
   }
+};
 
-  // Verify images exist and return full paths
-  const fullPaths = imageFiles.map((filename) => `${imagePath}/${filename}`);
-
-  // Optionally verify images exist (can be disabled for performance)
-  const verifyImages = true;
-
-  if (verifyImages) {
-    const testPromises = fullPaths.map(async (fullPath) => {
-      try {
-        const response = await fetch(fullPath, { method: "HEAD" });
-        return response.ok ? fullPath : null;
-      } catch (error) {
-        return null;
+/**
+ * Loads images from a directory using manifest.json (generated at build time)
+ * @param {string} imagePath - Path to the images directory
+ * @returns {Promise<string[]>} - Array of discovered image URLs
+ */
+const discoverImagesInDirectory = async (imagePath) => {
+  try {
+    const manifestResponse = await fetch(`${imagePath}/manifest.json`);
+    if (manifestResponse.ok) {
+      const manifest = await manifestResponse.json();
+      if (manifest.images && Array.isArray(manifest.images)) {
+        return manifest.images.map((img) => `${imagePath}/${img}`);
       }
-    });
-
-    const results = await Promise.all(testPromises);
-    return results.filter((img) => img !== null);
+    }
+  } catch (error) {
+    console.warn(
+      `No manifest found for ${imagePath}. Make sure to run the build process to generate manifests.`
+    );
   }
 
-  return fullPaths;
+  return [];
 };
 
 /**
- * Add a new project's images to the mapping
- * @param {string} imagePath - Path to the images directory
- * @param {string[]} imageFiles - Array of image filenames
- */
-export const addProjectImages = (imagePath, imageFiles) => {
-  PROJECT_IMAGE_MAPPINGS[imagePath] = imageFiles;
-};
-
-/**
- * A more specific function for projects that use the images directory pattern
- * This will be more reliable for your specific use case
+ * Main function for loading project images
  */
 export const loadProjectImages = async (project) => {
   if (!project.images) {
