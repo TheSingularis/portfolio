@@ -1,8 +1,18 @@
 import React from 'react';
 
-const ProjectCard = ({ project, isGameJam = false }) => {
+const ProjectCard = ({ project, isGameJam = false, onProjectClick }) => {
+  const handleCardClick = () => {
+    if (onProjectClick) {
+      onProjectClick(project);
+    }
+  };
+
   return (
-    <div className={`project-card ${project.image ? 'project-card--with-image' : ''}`}>
+    <div 
+      className={`project-card ${project.image ? 'project-card--with-image' : ''}`}
+      onClick={handleCardClick}
+      style={{ cursor: 'pointer' }}
+    >
       {project.image && (
         <div className="project-image-section">
           <img 
@@ -32,16 +42,24 @@ const ProjectCard = ({ project, isGameJam = false }) => {
           ))}
         </div>
         <div className="project-links">
-          {project.link && (
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-              Code
-            </a>
-          )}
-          {project.live && (
-            <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
-              Live Demo
-            </a>
-          )}
+          {/* {project.links && project.links.map((link, index) => {
+            const linkType = Object.keys(link)[0];
+            const linkUrl = link[linkType];
+            const linkLabel = linkType.charAt(0).toUpperCase() + linkType.slice(1);
+            
+            return (
+              <a 
+                key={index}
+                href={linkUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="project-link"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {linkLabel}
+              </a>
+            );
+          })} */}
         </div>
       </div>
     </div>
