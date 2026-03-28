@@ -1,16 +1,15 @@
 {
   "personal": {
-    "name": "Aiden Sluiter",
-    "title": "Videogame Developer",
-    "intro": "Hi, I'm Aiden! I'm a passionate videogame developer with experience in creating immersive and engaging gaming experiences. I love bringing ideas to life through code and design.",
-    "email": "your.email@example.com",
+    "name": "Jordan Sluiter",
+    "title": "Software Developer",
+    "intro": "",
+    "email": "jordan.sluiter@icloud.com",
     "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "location": "Hudson, Wisconsin, USA",
+    "location": "River Falls, Wisconsin, USA",
     "profileImage": "/portfolio/profile.jpg",
     "resume": "/portfolio/resume.pdf",
-    "github": "https://github.com/yourusername",
-    "itchio": "https://yourusername.itch.io",
-    "linkedin": "https://linkedin.com/in/yourusername"
+    "github": "https://github.com/TheSingularis",
+    "linkedin": "https://www.linkedin.com/in/jordan-sluiter-221081178/"
   },
   "skills": [
     {
