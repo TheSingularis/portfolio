@@ -1,3 +1,5 @@
+[![Deploy to GitHub Pages](https://github.com/TheSingularis/portfolio/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/TheSingularis/portfolio/actions/workflows/pages.yml)
+
 # Portfolio Website
 
 A modern, responsive portfolio website built with React and Vite, showcasing projects, skills, and professional information for game developers and software engineers.
@@ -182,7 +184,7 @@ The modular component structure makes it easy to:
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/new-feature`
 3. Commit your changes: `git commit -am 'Add new feature'`
-4. Push to the branch: `git push origin feature/new-feature`
+4. Push to the branch: `git push origin feature-new-feature`
 5. Submit a pull request
 
 ## License
