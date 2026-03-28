@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectSection from './components/ProjectSection.jsx';
+import ThemeToggle from './components/ThemeToggle.jsx';
 import portfolioData from './data/portfolio.json';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
 
   return (
     <div className="app">
+      <ThemeToggle />
       <main className="main-content">
         {/* Hero/Intro Section */}
         <section className="section hero">
@@ -25,6 +27,65 @@ function App() {
                 />
               </div>
             )}
+          </div>
+        </section>
+
+        {/* About Me (blurb) first */}
+        <section className="section section-divider">
+          <h2 className="section-title">About Me</h2>
+          <div className="about-single-column">
+            {personal.about ? (
+              <div className="about-background">
+                <p>{personal.about}</p>
+                {personal.location && (
+                  <p className="location">Based in {personal.location}</p>
+                )}
+              </div>
+            ) : (
+              <p>No about information available.</p>
+            )}
+          </div>
+        </section>
+
+        {/* Experience: Work then Education */}
+        <section className="section section-divider">
+          <h2 className="section-title">Experience</h2>
+          <div className="about-single-column">
+            <div className="about-work">
+              <h3 className="about-subtitle">Work Experience</h3>
+              {personal.experience && personal.experience.length > 0 ? (
+                personal.experience.map((e, idx) => (
+                  <div key={idx} className="experience-item">
+                    <div className="experience-head">
+                      <strong className="experience-role">{e.role}</strong>
+                      <span className="experience-company"> — {e.company}</span>
+                    </div>
+                    <div className="experience-dates">{e.dates}</div>
+                    {e.description && <div className="experience-desc">{e.description}</div>}
+                  </div>
+                ))
+              ) : (
+                <p>No work experience listed.</p>
+              )}
+            </div>
+
+            <div className="about-education">
+              <h3 className="about-subtitle">Education & Background</h3>
+              {personal.education && personal.education.length > 0 ? (
+                personal.education.map((ed, idx) => (
+                  <div key={idx} className="education-item">
+                    <div className="education-head">
+                      <strong className="education-degree">{ed.degree}</strong>
+                      <span className="education-institution"> — {ed.institution}</span>
+                    </div>
+                    <div className="education-dates">{ed.dates}</div>
+                    {ed.description && <div className="education-desc">{ed.description}</div>}
+                  </div>
+                ))
+              ) : (
+                <p>No education listed.</p>
+              )}
+            </div>
           </div>
         </section>
 
@@ -70,17 +131,6 @@ function App() {
                 );
               }
             })}
-          </div>
-        </section>
-
-        {/* About / Background */}
-        <section className="section section-divider">
-          <h2 className="section-title">About / Background</h2>
-          <div className="about-content">
-            <p>{personal.about}</p>
-            {personal.location && (
-              <p className="location">Based in {personal.location}</p>
-            )}
           </div>
         </section>
 

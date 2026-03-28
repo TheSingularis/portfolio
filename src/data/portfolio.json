@@ -10,24 +10,64 @@
     "resume": "/portfolio/resume.pdf",
     "github": "https://github.com/TheSingularis",
     "linkedin": "https://www.linkedin.com/in/jordan-sluiter-221081178/"
+    ,
+    "experience": [
+      {
+        "company": "Mercury Marine",
+        "role": "Salesforce Administrator",
+        "dates": "2022 - 2026",
+        "description": "Service Application Administrator responsible for managing and optimizing the Salesforce platform to support the service department's operations. Key responsibilities include user management, system configuration, data integrity, and providing training and support to end-users. Collaborate with cross-functional teams to implement new features, automate processes, and ensure the platform meets the evolving needs of the business."
+      }
+    ],
+    "education": [
+      {
+        "institution": "Northwood Technical College",
+        "degree": "Associates Degree in Web and Software Development",
+        "dates": "2019 - 2021",
+        "description": "Focused on software engineering, algorithms, and systems programming."
+      }
+    ]
   },
   "skills": [
     {
-      "name": "Unreal Engine",
-      "link": "https://www.unrealengine.com/"
+      "name": "REST APIs",
+      "link": ""
     },
-    "Skill 2",
-    "Skill 3",
-    "Skill 4",
     {
-        "name": "Unity Engine",
-        "link": "https://unity.com/"
+        "name": "JavaScript",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
-    "Skill 6",
-    "Skill 7",
+    {
+        "name": "HTML",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
+        "name": "CSS",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+        "name": "Python",
+        "link": "https://www.python.org/"
+    },
+    {
+        "name": "Ollama",
+        "link": ""
+    },
     {
         "name": "Salesforce",
         "link": "https://salesforce.com"
+    },
+    {
+        "name": "Git",
+        "link": "https://git-scm.com/"
+    },
+    {
+        "name": "Docker",
+        "link": "https://www.docker.com/"
+    },
+    {
+        "name": "Linux",
+        "link": "https://www.linux.org/"
     }
   ],
   "featuredProjects": [
